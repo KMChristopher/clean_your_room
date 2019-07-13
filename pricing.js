@@ -1,7 +1,8 @@
 module.exports.calculateProductPrice = function (product, employee, selectedOptions) {
   var price = 0
   var fmtc = selectedOptions.familyMembersToCover
-
+  
+// KMC: Lots of if statements in this switch - start there? 
   switch (product.type) {
     case 'medical':
       if (fmtc.includes('ee')) {
